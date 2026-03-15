@@ -13,7 +13,7 @@ const GlitchText = ({ text }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGlitch(true);
-      setTimeout(() => setGlitch(false), 50);
+      setTimeout(() => setGlitch(false), 200);
     }, 3500);
     return () => clearInterval(interval);
   }, []);
@@ -166,7 +166,7 @@ const Hero = () => {
           fontFamily: 'var(--font-mono)', fontSize: isMobile ? '0.6rem' : '0.7rem',
           letterSpacing: '0.1em', color: 'rgba(219,213,242,0.35)',
         }}>
-          // «&nbsp;Le progrès naît de la curiosité et de la rigueur.&nbsp;»
+          {'// «\u00a0Le progrès naît de la curiosité et de la rigueur.\u00a0»'}
         </p>
 
         <div style={{

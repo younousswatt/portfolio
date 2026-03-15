@@ -8,7 +8,7 @@ const EDUCATION = [
     location: 'Dakar, Sénégal',
     school: 'ESMT',
     degree: 'Cycle Ingénieur',
-    desc: "Formation en cours dans une grande école d'ingénieurs de conception. Spécialisation en Genie des donnees et Intelligence artificielle (a confirmer).",
+    desc: "Formation en cours dans une grande école d'ingénieurs de conception. Spécialisation en informatique et systèmes numériques.",
   },
   {
     date: '2023 — 2025',
@@ -148,7 +148,7 @@ const Education = () => {
               fontFamily: 'var(--font-mono)', fontSize: '0.62rem',
               letterSpacing: '0.3em', color: 'var(--glow)',
               textTransform: 'uppercase', marginBottom: '1.5rem',
-            }}>// Langues</div>
+            }}>Langues</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1rem', marginBottom: '3.5rem' }}>
               {LANGUAGES.map(l => <LangBar key={l.code} lang={l} />)}
             </div>
@@ -158,7 +158,7 @@ const Education = () => {
               fontFamily: 'var(--font-mono)', fontSize: '0.62rem',
               letterSpacing: '0.3em', color: 'var(--glow)',
               textTransform: 'uppercase', marginBottom: '1.5rem',
-            }}>// Forces personnelles</div>
+            }}>Forces personnelles</div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '1rem' }}>
               {FORCES.map(f => (
                 <div
