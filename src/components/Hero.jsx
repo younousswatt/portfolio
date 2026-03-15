@@ -13,7 +13,7 @@ const GlitchText = ({ text }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGlitch(true);
-      setTimeout(() => setGlitch(false), 30);
+      setTimeout(() => setGlitch(false), 100);
     }, 50);
     return () => clearInterval(interval);
   }, []);
