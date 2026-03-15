@@ -8,7 +8,7 @@ const EDUCATION = [
     location: 'Dakar, Sénégal',
     school: 'ESMT',
     degree: 'Cycle Ingénieur',
-    desc: "Formation en cours dans une grande école d'ingénieurs de conception. Spécialisation en informatique et systèmes numériques.",
+    desc: "Formation en cours dans une grande école d'ingénieurs de conception. Spécialisation en ingenierie de donnees et intelligence artificielle (a confirmer).",
   },
   {
     date: '2023 — 2025',
