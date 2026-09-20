@@ -10,7 +10,7 @@ export default function NotFound() {
         </h1>
         <p className="mt-6 text-xl text-[var(--muted)]">Page not found</p>
         <p className="mt-4 text-base text-[var(--muted)]">
-          The page you're looking for doesn't exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <Link

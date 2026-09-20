@@ -8,10 +8,8 @@ import {
   ArrowUpRight,
   BrainCircuit,
   Code2,
-  Database,
   Mail,
   MapPin,
-  Network,
   Sparkles,
 } from "lucide-react";
 
@@ -98,7 +96,7 @@ export default function Home() {
           <SectionHeader
             eyebrow="Selected work"
             title="Selected work"
-            description="A selection of things I've built, explored and shipped."
+            description="A selection of things I&apos;ve built, explored and shipped."
           />
 
           <div className="mt-10 space-y-6">
@@ -211,7 +209,7 @@ export default function Home() {
                 A little more about me.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-7 text-[var(--muted)] md:text-lg">
-                I'm Younouss Watt, a Dakar-based engineering student building products at the intersection of software,
+                I&apos;m Younouss Watt, a Dakar-based engineering student building products at the intersection of software,
                 data, AI and telecommunications. I care about turning ideas into useful systems and about creating tools
                 that are thoughtful, elegant and genuinely usable.
               </p>
@@ -248,7 +246,7 @@ export default function Home() {
               <div>
                 <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">Contact</p>
                 <h2 className="mt-4 text-3xl font-medium tracking-[-0.05em] text-[var(--foreground)] md:text-5xl">
-                  Let's build something.
+                  Let&apos;s build something.
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-7 text-[var(--muted)] md:text-lg">
                   Have a project, opportunity or idea worth discussing?
