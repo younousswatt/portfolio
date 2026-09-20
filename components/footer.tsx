@@ -15,7 +15,7 @@ export function Footer() {
               <Globe2 size={14} />
               LinkedIn
             </a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[var(--foreground)]">
+            <a href="https://github.com/younousswatt" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-[var(--foreground)]">
               <GitBranch size={14} />
               GitHub
             </a>

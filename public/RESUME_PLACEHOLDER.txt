@@ -1,0 +1,12 @@
+RESUME PLACEHOLDER
+==================
+
+To add your resume to the portfolio:
+
+1. Create your resume as a PDF file
+2. Name it: Younouss-Watt-CV.pdf
+3. Place it in this public/ folder
+4. The navbar and footer will automatically link to it
+
+The resume button currently links to /Younouss-Watt-CV.pdf
+which should be replaced with your actual resume file.

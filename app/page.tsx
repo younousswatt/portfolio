@@ -19,32 +19,11 @@ import { certifications } from "@/data/certifications";
 import { experience } from "@/data/experience";
 import { projectList } from "@/data/projects";
 import { skillGroups } from "@/data/skills";
+import { expertise } from "@/data/expertise";
 import { HeroVisual } from "@/components/hero-visual";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeader } from "@/components/section-header";
-
-const expertise = [
-  {
-    title: "Software",
-    description: "Modern web applications, APIs and full-stack systems shaped around real user needs.",
-    icon: Code2,
-  },
-  {
-    title: "Data",
-    description: "Data flows, SQL analysis and meaningful product insights built for operational clarity.",
-    icon: Database,
-  },
-  {
-    title: "AI",
-    description: "Exploration of intelligent products, learning systems and agentic workflows.",
-    icon: BrainCircuit,
-  },
-  {
-    title: "Networks",
-    description: "Connectivity, telecom systems and infrastructure thinking for resilient digital services.",
-    icon: Network,
-  },
-];
+import { AnimatedSection } from "@/components/animated-section";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -104,22 +83,22 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <section className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection className="px-4 pb-20 md:px-8 lg:px-12" delay={0.1}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Introduction"
             title="Building things that are meant to be used."
-            description="I’m interested in building useful digital products: web applications, data tools, intelligent systems and connected infrastructures. My approach blends technical curiosity, problem-solving and the discipline of turning ideas into functioning products."
+            description="I'm interested in building useful digital products: web applications, data tools, intelligent systems and connected infrastructures. My approach blends technical curiosity, problem-solving and the discipline of turning ideas into functioning products."
           />
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section id="work" className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection id="work" className="px-4 pb-20 md:px-8 lg:px-12" delay={0.2}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Selected work"
             title="Selected work"
-            description="A selection of things I’ve built, explored and shipped."
+            description="A selection of things I've built, explored and shipped."
           />
 
           <div className="mt-10 space-y-6">
@@ -128,9 +107,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection className="px-4 pb-20 md:px-8 lg:px-12" delay={0.3}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="What I build"
@@ -145,7 +124,7 @@ export default function Home() {
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--surface-strong)] text-[var(--foreground)]">
                     <Icon size={15} />
                   </span>
-                  0{expertise.indexOf(expertise.find((item) => item.title === title)!)+1}
+                  0{expertise.findIndex((item) => item.title === title) + 1}
                 </div>
                 <div>
                   <h3 className="text-2xl font-medium tracking-[-0.04em] text-[var(--foreground)]">{title}</h3>
@@ -155,9 +134,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection className="px-4 pb-20 md:px-8 lg:px-12" delay={0.4}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Tools I work with"
@@ -178,9 +157,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection className="px-4 pb-20 md:px-8 lg:px-12" delay={0.5}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Journey"
@@ -199,9 +178,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection className="px-4 pb-20 md:px-8 lg:px-12" delay={0.6}>
         <div className="mx-auto max-w-6xl">
           <SectionHeader
             eyebrow="Certifications"
@@ -221,9 +200,9 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section id="about" className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection id="about" className="px-4 pb-20 md:px-8 lg:px-12" delay={0.7}>
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 border-t border-[var(--border)] py-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
@@ -232,7 +211,7 @@ export default function Home() {
                 A little more about me.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-7 text-[var(--muted)] md:text-lg">
-                I’m Younouss Watt, a Dakar-based engineering student building products at the intersection of software,
+                I'm Younouss Watt, a Dakar-based engineering student building products at the intersection of software,
                 data, AI and telecommunications. I care about turning ideas into useful systems and about creating tools
                 that are thoughtful, elegant and genuinely usable.
               </p>
@@ -260,16 +239,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
-      <section id="contact" className="px-4 pb-20 md:px-8 lg:px-12">
+      <AnimatedSection id="contact" className="px-4 pb-20 md:px-8 lg:px-12" delay={0.8}>
         <div className="mx-auto max-w-6xl">
           <div className="border-t border-[var(--border)] py-10">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[var(--muted)]">Contact</p>
                 <h2 className="mt-4 text-3xl font-medium tracking-[-0.05em] text-[var(--foreground)] md:text-5xl">
-                  Let’s build something.
+                  Let's build something.
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-7 text-[var(--muted)] md:text-lg">
                   Have a project, opportunity or idea worth discussing?
@@ -297,7 +276,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </>
   );
 }

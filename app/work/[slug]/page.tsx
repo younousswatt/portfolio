@@ -18,7 +18,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   }
 
   const currentIndex = projectList.findIndex((item) => item.slug === slug);
-  const nextProject = projectList[(currentIndex + 1) % projectList.length];
+  const nextIndex = (currentIndex + 1) % projectList.length;
+  const nextProject = projectList[nextIndex]!;
 
   return (
     <article className="px-4 pb-20 pt-8 md:px-8 lg:px-12">

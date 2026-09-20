@@ -1,28 +1,69 @@
-<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1400" height="900" fill="#F3F3F5"/>
-  <rect x="120" y="108" width="1160" height="684" rx="36" fill="#F8F8FA"/>
-  <rect x="190" y="170" width="270" height="500" rx="34" fill="#FFFFFF"/>
-  <rect x="224" y="212" width="200" height="16" rx="8" fill="#D8D8DD"/>
-  <rect x="224" y="246" width="126" height="12" rx="6" fill="#E8E8EC"/>
-  <rect x="224" y="286" width="202" height="148" rx="18" fill="#EEF2F7"/>
-  <rect x="224" y="454" width="202" height="52" rx="14" fill="#EEF2F7"/>
-  <rect x="224" y="522" width="202" height="52" rx="14" fill="#EEF2F7"/>
-  <rect x="520" y="170" width="650" height="520" rx="32" fill="#FFFFFF"/>
-  <path d="M588 566C650 466 680 442 755 410C858 367 936 382 1016 350C1080 324 1120 280 1170 240V636H588V566Z" fill="#EAF0F6"/>
-  <circle cx="698" cy="420" r="18" fill="#5AA5FF" fill-opacity="0.15"/>
-  <circle cx="778" cy="378" r="18" fill="#5AA5FF" fill-opacity="0.15"/>
-  <circle cx="874" cy="438" r="18" fill="#5AA5FF" fill-opacity="0.15"/>
-  <circle cx="992" cy="356" r="18" fill="#5AA5FF" fill-opacity="0.15"/>
-  <path d="M698 420L778 378L874 438L992 356" stroke="#2E7FF8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="698" cy="420" r="34" fill="#EAF4FF"/>
-  <circle cx="778" cy="378" r="34" fill="#EAF4FF"/>
-  <circle cx="874" cy="438" r="34" fill="#EAF4FF"/>
-  <circle cx="992" cy="356" r="34" fill="#EAF4FF"/>
-  <rect x="580" y="210" width="110" height="48" rx="14" fill="#EAF4FF"/>
-  <rect x="710" y="210" width="110" height="48" rx="14" fill="#EEF1F4"/>
-  <rect x="840" y="210" width="110" height="48" rx="14" fill="#EEF1F4"/>
-  <rect x="970" y="210" width="110" height="48" rx="14" fill="#EEF1F4"/>
-  <rect x="586" y="286" width="198" height="158" rx="20" fill="#F5F7FB"/>
-  <rect x="810" y="286" width="306" height="158" rx="20" fill="#F5F7FB"/>
-  <rect x="586" y="476" width="530" height="130" rx="20" fill="#F5F7FB"/>
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F5F5F7"/>
+  
+  <!-- Subtle gradient -->
+  <defs>
+    <linearGradient id="mobileBg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F5F7"/>
+      <stop offset="100%" stop-color="#E8E8EB"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#mobileBg)"/>
+  
+  <!-- Abstract background elements -->
+  <circle cx="600" cy="400" r="350" fill="rgba(0, 113, 227, 0.03)"/>
+  <circle cx="200" cy="150" r="100" fill="rgba(0, 113, 227, 0.02)"/>
+  <circle cx="1000" cy="650" r="80" fill="rgba(0, 113, 227, 0.02)"/>
+  
+  <!-- Mobile phone mockup -->
+  <g transform="translate(450, 100)">
+    <!-- Phone body -->
+    <rect x="0" y="0" width="300" height="600" rx="40" fill="#1D1D1F"/>
+    <rect x="10" y="10" width="280" height="580" rx="32" fill="#F5F5F7"/>
+    
+    <!-- Screen content -->
+    <rect x="20" y="50" width="260" height="80" rx="12" fill="#0071E3" opacity="0.1"/>
+    <text x="40" y="95" font-family="Arial" font-size="16" font-weight="600" fill="#0071E3">SamaService</text>
+    
+    <!-- Search bar -->
+    <rect x="20" y="150" width="260" height="40" rx="20" fill="#E8E8EB"/>
+    <text x="40" y="175" font-family="Arial" font-size="12" fill="#666a72">Search services...</text>
+    
+    <!-- Service cards -->
+    <rect x="20" y="210" width="120" height="100" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <circle cx="80" cy="250" r="20" fill="#0071E3" opacity="0.2"/>
+    <text x="50" y="290" font-family="Arial" font-size="10" fill="#1D1D1F">Plumbing</text>
+    
+    <rect x="160" y="210" width="120" height="100" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <circle cx="220" cy="250" r="20" fill="#0071E3" opacity="0.2"/>
+    <text x="190" y="290" font-family="Arial" font-size="10" fill="#1D1D1F">Electric</text>
+    
+    <rect x="20" y="330" width="120" height="100" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <circle cx="80" cy="370" r="20" fill="#0071E3" opacity="0.2"/>
+    <text x="55" y="410" font-family="Arial" font-size="10" fill="#1D1D1F">Cleaning</text>
+    
+    <rect x="160" y="330" width="120" height="100" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <circle cx="220" cy="370" r="20" fill="#0071E3" opacity="0.2"/>
+    <text x="195" y="410" font-family="Arial" font-size="10" fill="#1D1D1F">Delivery</text>
+    
+    <!-- Map element -->
+    <rect x="20" y="450" width="260" height="120" rx="12" fill="#E8E8EB"/>
+    <circle cx="150" cy="510" r="8" fill="#0071E3"/>
+    <circle cx="120" cy="530" r="4" fill="#666a72"/>
+    <circle cx="180" cy="500" r="4" fill="#666a72"/>
+    <circle cx="160" cy="540" r="4" fill="#666a72"/>
+    
+    <!-- Location pin -->
+    <path d="M150 480 L150 495" stroke="#0071E3" stroke-width="2"/>
+    <circle cx="150" cy="478" r="6" fill="#0071E3"/>
+  </g>
+  
+  <!-- Floating elements -->
+  <g opacity="0.1">
+    <rect x="100" y="200" width="80" height="80" rx="16" fill="#0071E3"/>
+    <rect x="1020" y="100" width="60" height="60" rx="12" fill="#0071E3"/>
+    <circle cx="200" cy="600" r="40" fill="#0071E3"/>
+  </g>
 </svg>

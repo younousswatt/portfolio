@@ -1,21 +1,140 @@
-<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1400" height="900" fill="#F3F3F5"/>
-  <rect x="120" y="115" width="1160" height="670" rx="34" fill="#FFFFFF"/>
-  <rect x="190" y="205" width="1020" height="84" rx="18" fill="#F7F8FA"/>
-  <rect x="190" y="330" width="480" height="330" rx="26" fill="#F7F8FA"/>
-  <rect x="710" y="330" width="500" height="330" rx="26" fill="#F7F8FA"/>
-  <rect x="228" y="236" width="180" height="16" rx="8" fill="#D9D9DE"/>
-  <rect x="228" y="268" width="122" height="12" rx="6" fill="#E7E9EE"/>
-  <rect x="222" y="372" width="180" height="18" rx="9" fill="#D9D9DE"/>
-  <rect x="222" y="410" width="240" height="12" rx="6" fill="#E9EBF0"/>
-  <rect x="222" y="437" width="272" height="12" rx="6" fill="#E9EBF0"/>
-  <rect x="222" y="464" width="248" height="12" rx="6" fill="#E9EBF0"/>
-  <rect x="220" y="548" width="160" height="54" rx="16" fill="#E6F0FF"/>
-  <rect x="754" y="372" width="180" height="18" rx="9" fill="#D9D9DE"/>
-  <rect x="754" y="410" width="264" height="12" rx="6" fill="#E9EBF0"/>
-  <rect x="754" y="437" width="288" height="12" rx="6" fill="#E9EBF0"/>
-  <rect x="754" y="464" width="220" height="12" rx="6" fill="#E9EBF0"/>
-  <path d="M913 566L960 508L1008 542L1060 470L1114 566H913Z" fill="#E6F0FF"/>
-  <path d="M900 590H1128" stroke="#D1D9EC" stroke-width="8" stroke-linecap="round"/>
-  <path d="M900 620H1080" stroke="#E3E8F4" stroke-width="8" stroke-linecap="round"/>
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#F5F5F7"/>
+  
+  <!-- Subtle gradient -->
+  <defs>
+    <linearGradient id="adcBg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F5F7"/>
+      <stop offset="100%" stop-color="#E8E8EB"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="800" fill="url(#adcBg)"/>
+  
+  <!-- Abstract background elements -->
+  <circle cx="600" cy="400" r="350" fill="rgba(0, 113, 227, 0.03)"/>
+  <circle cx="180" cy="200" r="100" fill="rgba(0, 113, 227, 0.02)"/>
+  <circle cx="1020" cy="600" r="80" fill="rgba(0, 113, 227, 0.02)"/>
+  
+  <!-- Microcontroller chip -->
+  <g transform="translate(450, 200)">
+    <!-- Chip body -->
+    <rect x="0" y="0" width="300" height="400" rx="16" fill="#1D1D1F"/>
+    
+    <!-- Chip label -->
+    <text x="150" y="40" font-family="Arial" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">ATmega</text>
+    <text x="150" y="60" font-family="Arial" font-size="12" fill="#666a72" text-anchor="middle">Microcontroller</text>
+    
+    <!-- ADC representation -->
+    <rect x="30" y="100" width="240" height="80" rx="8" fill="#F5F5F7"/>
+    <text x="150" y="125" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F" text-anchor="middle">10-bit ADC</text>
+    <text x="150" y="145" font-family="Arial" font-size="10" fill="#666a72" text-anchor="middle">Analog to Digital Converter</text>
+    
+    <!-- Pin representation -->
+    <g fill="#0071E3">
+      <rect x="20" y="200" width="15" height="8" rx="2"/>
+      <rect x="40" y="200" width="15" height="8" rx="2"/>
+      <rect x="60" y="200" width="15" height="8" rx="2"/>
+      <rect x="80" y="200" width="15" height="8" rx="2"/>
+      <rect x="100" y="200" width="15" height="8" rx="2"/>
+      <rect x="120" y="200" width="15" height="8" rx="2"/>
+      <rect x="140" y="200" width="15" height="8" rx="2"/>
+      <rect x="160" y="200" width="15" height="8" rx="2"/>
+      <rect x="180" y="200" width="15" height="8" rx="2"/>
+      <rect x="200" y="200" width="15" height="8" rx="2"/>
+      <rect x="220" y="200" width="15" height="8" rx="2"/>
+      <rect x="240" y="200" width="15" height="8" rx="2"/>
+      <rect x="260" y="200" width="15" height="8" rx="2"/>
+    </g>
+    
+    <!-- Code/register view -->
+    <rect x="30" y="250" width="240" height="120" rx="8" fill="#1D1D1F"/>
+    <text x="45" y="275" font-family="monospace" font-size="10" fill="#28C840">// ADC Setup</text>
+    <text x="45" y="295" font-family="monospace" font-size="10" fill="#FEBC2E">ADMUX</text>
+    <text x="45" y="315" font-family="monospace" font-size="10" fill="#FFFFFF">= (1 << REFS0);</text>
+    <text x="45" y="335" font-family="monospace" font-size="10" fill="#FEBC2E">ADCSRA</text>
+    <text x="45" y="355" font-family="monospace" font-size="10" fill="#FFFFFF">= (1 << ADEN) |</text>
+    <text x="45" y="375" font-family="monospace" font-size="10" fill="#FFFFFF">(1 << ADSC);</text>
+  </g>
+  
+  <!-- Signal visualization -->
+  <g transform="translate(150, 300)">
+    <rect x="0" y="0" width="200" height="150" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <text x="20" y="30" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F">Analog Signal</text>
+    
+    <!-- Analog wave -->
+    <path d="M20 80 Q40 40 60 80 Q80 120 100 80 Q120 40 140 80 Q160 120 180 80" 
+          fill="none" stroke="#0071E3" stroke-width="2"/>
+  </g>
+  
+  <g transform="translate(850, 300)">
+    <rect x="0" y="0" width="200" height="150" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <text x="20" y="30" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F">Digital Output</text>
+    
+    <!-- Digital steps -->
+    <rect x="20" y="70" width="20" height="40" fill="#0071E3" opacity="0.4"/>
+    <rect x="45" y="60" width="20" height="50" fill="#0071E3" opacity="0.5"/>
+    <rect x="70" y="50" width="20" height="60" fill="#0071E3" opacity="0.6"/>
+    <rect x="95" y="65" width="20" height="45" fill="#0071E3" opacity="0.5"/>
+    <rect x="120" y="55" width="20" height="55" fill="#0071E3" opacity="0.6"/>
+    <rect x="145" y="75" width="20" height="35" fill="#0071E3" opacity="0.4"/>
+  </g>
+  
+  <!-- Optimization metrics -->
+  <g transform="translate(150, 500)">
+    <rect x="0" y="0" width="250" height="180" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <text x="20" y="30" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F">Optimization Results</text>
+    
+    <text x="20" y="60" font-family="Arial" font-size="10" fill="#666a72">Reading Speed</text>
+    <rect x="20" y="70" width="150" height="8" rx="4" fill="#E8E8EB"/>
+    <rect x="20" y="70" width="180" height="8" rx="4" fill="#28C840"/>
+    <text x="210" y="78" font-family="Arial" font-size="10" fill="#28C840">+40%</text>
+    
+    <text x="20" y="100" font-family="Arial" font-size="10" fill="#666a72">Accuracy</text>
+    <rect x="20" y="110" width="150" height="8" rx="4" fill="#E8E8EB"/>
+    <rect x="20" y="110" width="140" height="8" rx="4" fill="#0071E3"/>
+    <text x="170" y="118" font-family="Arial" font-size="10" fill="#0071E3">98%</text>
+    
+    <text x="20" y="140" font-family="Arial" font-size="10" fill="#666a72">Power Efficiency</text>
+    <rect x="20" y="150" width="150" height="8" rx="4" fill="#E8E8EB"/>
+    <rect x="20" y="150" width="120" height="8" rx="4" fill="#FEBC2E"/>
+    <text x="150" y="158" font-family="Arial" font-size="10" fill="#FEBC2E">-25%</text>
+  </g>
+  
+  <!-- Circuit elements -->
+  <g transform="translate(800, 500)">
+    <rect x="0" y="0" width="250" height="180" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <text x="20" y="30" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F">Circuit Elements</text>
+    
+    <!-- Resistor symbol -->
+    <path d="M30 70 L40 70 L45 60 L55 80 L65 60 L75 80 L85 60 L95 80 L100 70 L110 70" 
+          fill="none" stroke="#1D1D1F" stroke-width="2"/>
+    <text x="120" y="75" font-family="Arial" font-size="10" fill="#666a72">Resistor</text>
+    
+    <!-- Capacitor symbol -->
+    <line x1="30" y1="100" x2="50" y2="100" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="50" y1="90" x2="50" y2="110" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="55" y1="90" x2="55" y2="110" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="55" y1="100" x2="75" y2="100" stroke="#1D1D1F" stroke-width="2"/>
+    <text x="85" y="105" font-family="Arial" font-size="10" fill="#666a72">Capacitor</text>
+    
+    <!-- IC symbol -->
+    <rect x="30" y="130" width="40" height="30" rx="4" fill="none" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="20" y1="140" x2="30" y2="140" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="20" y1="150" x2="30" y2="150" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="70" y1="140" x2="80" y2="140" stroke="#1D1D1F" stroke-width="2"/>
+    <line x1="70" y1="150" x2="80" y2="150" stroke="#1D1D1F" stroke-width="2"/>
+    <text x="90" y="150" font-family="Arial" font-size="10" fill="#666a72">Op-Amp</text>
+  </g>
+  
+  <!-- Timing diagram -->
+  <g transform="translate(450, 650)">
+    <rect x="0" y="0" width="300" height="100" rx="12" fill="#FFFFFF" stroke="#E8E8EB"/>
+    <text x="20" y="25" font-family="Arial" font-size="12" font-weight="600" fill="#1D1D1F">Timing Diagram</text>
+    
+    <!-- Clock signal -->
+    <path d="M20 60 L40 60 L40 45 L50 75 L60 45 L70 75 L80 45 L90 75 L100 45 L110 75 L120 45 L130 75 L140 45 L150 75 L160 45 L170 75 L180 45 L190 75 L200 45 L210 75 L220 45 L230 75 L240 45 L250 75 L260 45 L270 75 L280 60" 
+          fill="none" stroke="#0071E3" stroke-width="2"/>
+  </g>
 </svg>

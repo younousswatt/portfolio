@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Download, Menu, Moon, Monitor, Sun, X } from "lucide-react";
 
 const navItems = [
@@ -117,6 +118,8 @@ export function Navbar() {
               href="/Younouss-Watt-CV.pdf"
               download
               className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-3 py-2 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-[var(--border-strong)]"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Download size={14} />
               Resume
@@ -125,7 +128,7 @@ export function Navbar() {
 
           <button
             type="button"
-            aria-label="Open menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen((current) => !current)}
             className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] text-[var(--foreground)] md:hidden"
           >
@@ -133,49 +136,59 @@ export function Navbar() {
           </button>
         </div>
 
-        {menuOpen ? (
-          <div className="mt-3 border-t border-[var(--border)] pt-3 md:hidden">
-            <div className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="px-1 py-2 text-sm text-[var(--foreground)]"
-                >
-                  {item.label}
-                </Link>
-              ))}
+        <AnimatePresence>
+          {menuOpen ? (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="mt-3 border-t border-[var(--border)] bg-[var(--background)] backdrop-blur-md pt-3 md:hidden"
+            >
+              <div className="flex flex-col gap-2">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="px-1 py-2 text-sm text-[var(--foreground)] transition-colors hover:text-[var(--accent)]"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
 
-              <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--border)] pt-3">
-                <div className="flex items-center gap-1 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] p-1">
-                  {themeOptions.map(({ label, value, icon: Icon }) => (
-                    <button
-                      key={value}
-                      type="button"
-                      aria-label={`Set theme to ${label}`}
-                      onClick={() => setTheme(value)}
-                      className={`flex h-8 w-8 items-center justify-center rounded-full ${
-                        theme === value ? "bg-[var(--foreground)] text-[var(--background)]" : "text-[var(--muted)]"
-                      }`}
-                    >
-                      <Icon size={15} />
-                    </button>
-                  ))}
+                <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--border)] pt-3">
+                  <div className="flex items-center gap-1 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] p-1">
+                    {themeOptions.map(({ label, value, icon: Icon }) => (
+                      <button
+                        key={value}
+                        type="button"
+                        aria-label={`Set theme to ${label}`}
+                        onClick={() => setTheme(value)}
+                        className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors ${
+                          theme === value ? "bg-[var(--foreground)] text-[var(--background)]" : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                        }`}
+                      >
+                        <Icon size={15} />
+                      </button>
+                    ))}
+                  </div>
+
+                  <a
+                    href="/Younouss-Watt-CV.pdf"
+                    download
+                    className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-3 py-2 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-[var(--border-strong)]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download size={14} />
+                    Resume
+                  </a>
                 </div>
-
-                <a
-                  href="/Younouss-Watt-CV.pdf"
-                  download
-                  className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-3 py-2 text-sm font-medium text-[var(--foreground)]"
-                >
-                  <Download size={14} />
-                  Resume
-                </a>
               </div>
-            </div>
-          </div>
-        ) : null}
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </nav>
     </header>
   );
