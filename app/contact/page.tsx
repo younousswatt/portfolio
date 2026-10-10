@@ -16,7 +16,7 @@ export default function ContactPage() {
           <div className="mt-8 flex flex-col gap-4 md:flex-row">
             <a
               href="mailto:wattyounouss6@gmail.com"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--foreground)] px-5 py-3 text-sm font-medium text-[var(--background)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               <Mail size={16} />
               Get in touch
@@ -25,7 +25,7 @@ export default function ContactPage() {
               href="https://www.linkedin.com/in/younouss-watt-a03647349/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-medium text-[var(--foreground)]"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-5 py-3 text-sm font-medium text-[var(--foreground)] transition-colors duration-200 hover:border-[var(--border-strong)]"
             >
               LinkedIn
               <ArrowUpRight size={14} />
